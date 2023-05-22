@@ -6,6 +6,10 @@ export default {
     ],
     theme: {
       extend: {},
+      colors: { 
+        "orange":"#CF5D00",
+      },
     },
+  
     plugins: [],
   }
