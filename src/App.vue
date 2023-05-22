@@ -1,11 +1,11 @@
 <template>
-  <HomeView />
+  <navigation />
+
+  <RouterView />
 </template>
 
 <script setup lang="ts">
-  import HomeView from './views/HomeView.vue';
+import navigation from "./components/navigation.vue"
+import { RouterView } from 'vue-router';
 </script>
 
-<style lang="scss" scoped>
-
-</style>
