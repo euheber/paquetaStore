@@ -25,11 +25,17 @@
         </a>
 
         <ul class="flex gap-5">
-          <li>
+          <li class="relative">
             <img src="icons/heart.svg" alt="ícone de lista de desejos" class="w-7">
+            <span class="absolute flex justify-center items-center bottom-4 left-5 bg-yellowish w-6 rounded-xl text-white font-normal">
+              1
+            </span>
           </li>
-          <li>
+          <li class="relative">
             <img src="icons/bag.svg" alt="ícone de carrinho de compras" class="w-7">
+            <span class="absolute flex justify-center items-center bottom-4 left-5 bg-yellowish w-6 rounded-xl text-white font-normal">
+              3
+            </span>
           </li>
           <li>
             <img src="icons/login.svg" alt="ícone de login" class="w-7">
