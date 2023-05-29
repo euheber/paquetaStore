@@ -5,11 +5,12 @@ export default {
       "./src/**/*.{vue,js,ts,jsx,tsx}",
     ],
     theme: {
-      extend: {},
       colors: { 
         "orange":"#CF5D00",
+        "white":"#FFF",
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif']
       },
     },
-  
-    plugins: [],
   }
