@@ -7,6 +7,7 @@ export default {
     theme: {
       colors: { 
         "orange":"#CF5D00",
+        "yellowish":"#FFCD29",
         "white":"#FFF",
       },
       fontFamily: {
