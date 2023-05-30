@@ -5,3 +5,11 @@
 *{ 
     font-family: 'Poppins', sans-serif;
 }
+
+
+.banner-hero{ 
+    background-image: url(images/banner-hero.png);
+    background-position: center 25% ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

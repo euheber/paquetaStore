@@ -9,6 +9,8 @@ export default {
         "orange":"#CF5D00",
         "yellowish":"#FFCD29",
         "white":"#FFF",
+        "shadeblack":"#383838",
+        "grandientOne":" #F99500",
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif']

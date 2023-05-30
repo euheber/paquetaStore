@@ -44,12 +44,12 @@
        </div>
 
        <div class="sections mt-3">
-        <ul class="flex justify-center flex-wrap gap-4">
+        <ul class="flex justify-center flex-wrap gap-6">
           <li><a href="/" class="text-sm">Novidades</a></li>
           <li><a href="/" class="text-sm">Feminino</a></li>
-          <li><a href="" class="text-sm">Masculino</a></li>
+          <li><a href="/" class="text-sm">Masculino</a></li>
           <li><a href="/" class="text-sm">Paquetá-esportes</a></li>
-          <li><a href="" class="text-sm">Outlet</a></li>
+          <li><a href="/" class="text-sm">Outlet</a></li>
         </ul>
        </div>
     </nav>
@@ -59,8 +59,8 @@
 <script setup lang="ts">
 import {ref} from 'vue';
 
+let  productsInCart = ref<number | string>()
 
-let  productsInCart = ref(0)
 </script>
 
 
