@@ -6,7 +6,8 @@ export default {
     ],
     theme: {
       colors: { 
-        "orange":"#CF5D00",
+        "orange":"#CF5D00",     
+        "oranger":"#F57002",     
         "yellowish":"#FFCD29",
         "white":"#FFF",
         "shadeblack":"#383838",
