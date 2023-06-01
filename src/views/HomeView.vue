@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import buttonSlot from '@/components/slots/button.vue';
+import shoeSize from '@/components/shoe/shoeSize.vue';
 import images from "@/components/slots/images.vue";
 </script>
 
@@ -69,13 +70,67 @@ import images from "@/components/slots/images.vue";
     </div>
     <main>
         <div class="shoes mt-10">
-            <images sex="Calçados femininos" position="left-10" filter="bg-gradient-to-r ">
-                <img src="images/calcados-femininos.png" alt="">
-            </images>
+            <div class="shoe flex flex-col gap-2 justify-center items-center p-2">
+                <images sex="Calçados femininos" position="left-10" filter="bg-gradient-to-r ">
+                    <img src="images/calcados-femininos.png" alt="Calçado Feminino">
+                </images>
+                <div class="info">
+                    <p class="text-sm font-medium">Escolher o seu sapato favorito entre nossa
+                        <span class="font-bold">variedade de modelos e cores</span> não será uma tarefa
+                        fácil, mas o que uma mulher não consegue fazer?
+                    </p>
 
-            <images sex="Calçados masculino" position="right-10" filter="bg-gradient-to-l ">
-                <img src="images/calcados-masculinos.png" alt="">
-            </images>
+                    <buttonSlot class="px-24 mt-5">
+                        Conferir
+                    </buttonSlot>
+                </div>
+            </div>
+
+            <div class="shoe flex flex-col gap-2 justify-center items-center p-2">
+                <images sex="Calçados masculino" position="right-10" filter="bg-gradient-to-l ">
+                    <img src="images/calcados-masculinos.png" alt="">
+                </images>
+
+                <div class="info text-sm font-medium">
+                    <p class="text-sm">
+                        Tenha em seu guarda roupa sapatos de qualidade e confortáveis, para o dia a dia, trabalho e até
+                        mesmo para praticar esportes!
+                    </p>
+
+                    <buttonSlot class="px-24 mt-5 ml-40">
+                        Conferir
+                    </buttonSlot>
+                </div>
+            </div>
+        </div>
+
+        <div class="outlet mt-10 p-2">
+            <div class="flex gap-4 justify-center items-center">
+                <div class="logo w-36 flex flex-col">
+                    <img src="images/logo.png" alt="PaquetáStore" class="w-32">
+                    <span class="text-3xl text-orange font-bold uppercase self-end">Outlet</span>
+                </div>
+
+                <p class="text-sm">
+                    Você também pode escolher o seu novo sapato favorito de acordo com a sua numeração.
+                </p>
+            </div>
+
+
+            <ul class="mt-5 flex gap-2 flex-wrap">
+                <shoeSize>33</shoeSize>
+                <shoeSize>34</shoeSize>
+                <shoeSize>35</shoeSize>
+                <shoeSize>36</shoeSize>
+                <shoeSize>37</shoeSize>
+                <shoeSize>38</shoeSize>
+                <shoeSize>39</shoeSize>
+                <shoeSize>40</shoeSize>
+                <shoeSize>41</shoeSize>
+                <shoeSize>42</shoeSize>
+                <shoeSize>43</shoeSize>
+                <shoeSize>44</shoeSize>
+            </ul>
         </div>
     </main>
 </template>

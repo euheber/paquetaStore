@@ -10,8 +10,6 @@
                 {{ props.sex }}
             </p>
         </div>
-
-
 </template>
 
 <script setup lang=ts>
