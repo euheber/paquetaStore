@@ -2,6 +2,7 @@
 import buttonSlot from '@/components/slots/button.vue';
 import shoeSize from '@/components/shoe/shoeSize.vue';
 import images from "@/components/slots/images.vue";
+import card from '@/components/shoe/card.vue';
 </script>
 
 <template>
@@ -68,7 +69,7 @@ import images from "@/components/slots/images.vue";
             </li>
         </ul>
     </div>
-    <main>
+    <main class="p-2">
         <div class="shoes mt-10">
             <div class="shoe flex flex-col gap-2 justify-center items-center p-2">
                 <images sex="Calçados femininos" position="left-10" filter="bg-gradient-to-r ">
@@ -104,7 +105,7 @@ import images from "@/components/slots/images.vue";
             </div>
         </div>
 
-        <div class="outlet mt-10 p-2">
+        <div class="outlet mt-10">
             <div class="flex gap-4 justify-center items-center">
                 <div class="logo w-36 flex flex-col">
                     <img src="images/logo.png" alt="PaquetáStore" class="w-32">
@@ -131,6 +132,12 @@ import images from "@/components/slots/images.vue";
                 <shoeSize>43</shoeSize>
                 <shoeSize>44</shoeSize>
             </ul>
+        </div>
+
+        <div class="mt-5">
+            <h1 class="font-bold text-lg uppercase">Destaques</h1>
+
+            <card />
         </div>
     </main>
 </template>
