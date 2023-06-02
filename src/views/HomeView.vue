@@ -3,6 +3,19 @@ import buttonSlot from '@/components/slots/button.vue';
 import shoeSize from '@/components/shoe/shoeSize.vue';
 import images from "@/components/slots/images.vue";
 import card from '@/components/shoe/card.vue';
+import { onMounted } from 'vue';
+import { ref } from 'vue';
+
+let shoeList = ref()
+
+onMounted(async () => {
+    const api = await fetch("https://api.brchallenges.com/api/paqueta/shoes")
+    const data = await api.json()
+
+    shoeList.value = data
+    
+})
+
 </script>
 
 <template>
@@ -137,7 +150,7 @@ import card from '@/components/shoe/card.vue';
         <div class="mt-5">
             <h1 class="font-bold text-lg uppercase">Destaques</h1>
 
-            <card />
+            <card v-for="shoe in shoeList" :key="shoe.id" :shoe=shoe />
         </div>
     </main>
 </template>
