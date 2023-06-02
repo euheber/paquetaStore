@@ -14,7 +14,8 @@ export default {
         "grandientOne":" #F99500",
       },
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif']
+        'poppins': ['Poppins', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif']
       },
     },
   }
