@@ -3,8 +3,11 @@ import buttonSlot from '@/components/slots/button.vue';
 import shoeSize from '@/components/shoe/shoeSize.vue';
 import images from "@/components/slots/images.vue";
 import card from '@/components/shoe/card.vue';
+import { register } from 'swiper/element/bundle';
 import { onMounted } from 'vue';
 import { ref } from 'vue';
+
+register();
 
 let shoeList = ref()
 
@@ -13,7 +16,7 @@ onMounted(async () => {
     const data = await api.json()
 
     shoeList.value = data
-    
+
 })
 
 </script>
@@ -147,10 +150,18 @@ onMounted(async () => {
             </ul>
         </div>
 
-        <div class="mt-5">
-            <h1 class="font-bold text-lg uppercase">Destaques</h1>
+        <section class="mt-5">
+            <div class="header flex justify-between items-center">
+                <h1 class="font-bold text-lg uppercase">Destaques</h1>
+                <a href="/" class="text-sm">Conferir tudo</a>
+            </div>
 
-            <card v-for="shoe in shoeList" :key="shoe.id" :shoe=shoe />
-        </div>
+            <swiper-container :slidesPerView="'1'" :centeredSlides="false" :pagination="{clickable: true,}" class="mySwiper">
+                <swiper-slide v-for="shoe in shoeList" :key="shoe.id">
+                    <card :shoe=shoe />
+                </swiper-slide>
+            </swiper-container>
+        
+        </section>
     </main>
 </template>
