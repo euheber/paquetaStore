@@ -9,14 +9,31 @@ import { ref } from 'vue';
 
 register();
 
-let shoeList = ref()
+type Mask = [
+{
+    description: string,
+    id: string,
+    image: string,
+    name: string,
+    price: {
+      value: number,
+      discount: number
+    },
+    soldout: boolean
+}
+]
+
+
+
+const shoeList = ref();
+let slicedList = ref<Mask>()
 
 onMounted(async () => {
     const api = await fetch("https://api.brchallenges.com/api/paqueta/shoes")
     const data = await api.json()
 
     shoeList.value = data
-
+    slicedList.value = shoeList.value.slice(17)  
 })
 
 </script>
@@ -153,15 +170,14 @@ onMounted(async () => {
         <section class="mt-5">
             <div class="header flex justify-between items-center">
                 <h1 class="font-bold text-lg uppercase">Destaques</h1>
-                <a href="/" class="text-sm">Conferir tudo</a>
+                <a href="/" class="text-sm border-b-orange">Conferir tudo</a>
             </div>
 
-            <swiper-container :slidesPerView="'1'" :centeredSlides="false" :pagination="{clickable: true,}" class="mySwiper">
-                <swiper-slide v-for="shoe in shoeList" :key="shoe.id">
-                    <card :shoe=shoe />
+            <swiper-container :slidesPerView="'1'" :centeredSlides="true" :pagination="{clickable: true,}" class="mySwiper pb-12">
+                <swiper-slide v-for="shoe in slicedList" :key="shoe.id">
+                    <card :shoe=shoe class="m-auto"/>
                 </swiper-slide>
             </swiper-container>
-        
         </section>
     </main>
 </template>

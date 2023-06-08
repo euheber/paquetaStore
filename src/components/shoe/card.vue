@@ -24,7 +24,7 @@ const props = defineProps<{shoe: Mask}>()
       <img :src="props.shoe.image" alt="teste" class="h-28 w-36 mb-6">
       <p class="text-xs text-shadeblack mb-3 font-montserrat">{{ props.shoe.name }}</p>
       <span class="block font-bold text-sm text-shadeblack mr-auto font-montserrat">
-        R${{ props.shoe.price.value }},00
+        R${{ props.shoe.price.value }}
       </span>
       <span class="text-xs mr-auto mb-3 font-montserrat">
         OU 9X R${{ (props.shoe.price.value / 9).toFixed(2) }}
