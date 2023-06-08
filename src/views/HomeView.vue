@@ -25,15 +25,13 @@ type Mask = [
 
 
 
-const shoeList = ref();
-let slicedList = ref<Mask>()
+let shoeList = ref<Mask>()
 
 onMounted(async () => {
     const api = await fetch("https://api.brchallenges.com/api/paqueta/shoes")
     const data = await api.json()
 
-    shoeList.value = data
-    slicedList.value = shoeList.value.slice(17)  
+    shoeList.value = data.slice(17)  
 })
 
 </script>
@@ -174,7 +172,7 @@ onMounted(async () => {
             </div>
 
             <swiper-container :slidesPerView="'1'" :centeredSlides="true" :pagination="{clickable: true,}" class="mySwiper pb-12">
-                <swiper-slide v-for="shoe in slicedList" :key="shoe.id">
+                <swiper-slide v-for="shoe in shoeList" :key="shoe.id">
                     <card :shoe=shoe class="m-auto"/>
                 </swiper-slide>
             </swiper-container>
