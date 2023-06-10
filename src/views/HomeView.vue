@@ -10,17 +10,17 @@ import { ref } from 'vue';
 register();
 
 type Mask = [
-{
-    description: string,
-    id: string,
-    image: string,
-    name: string,
-    price: {
-      value: number,
-      discount: number
-    },
-    soldout: boolean
-}
+    {
+        description: string,
+        id: string,
+        image: string,
+        name: string,
+        price: {
+            value: number,
+            discount: number
+        },
+        soldout: boolean
+    }
 ]
 
 
@@ -31,7 +31,7 @@ onMounted(async () => {
     const api = await fetch("https://api.brchallenges.com/api/paqueta/shoes")
     const data = await api.json()
 
-    shoeList.value = data.slice(17)  
+    shoeList.value = data.slice(17)
 })
 
 </script>
@@ -168,14 +168,55 @@ onMounted(async () => {
         <section class="mt-5">
             <div class="header flex justify-between items-center">
                 <h1 class="font-bold text-lg uppercase">Destaques</h1>
-                <a href="/" class="text-sm border-b-orange">Conferir tudo</a>
+                <a href="/" class="text-sm border-b-orange border-b">Conferir tudo</a>
             </div>
 
-            <swiper-container :slidesPerView="'1'" :centeredSlides="true" :pagination="{clickable: true,}" class="mySwiper pb-12">
+            <swiper-container :slidesPerView="'1'" :breakpoints="{
+                1024: {
+                    slidesPerView: 4,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+            }" :centeredSlides="false" :pagination="{ clickable: true, }" class="mySwiper pb-12">
                 <swiper-slide v-for="shoe in shoeList" :key="shoe.id">
                     <card :shoe=shoe class="m-auto"/>
                 </swiper-slide>
             </swiper-container>
         </section>
+
+        <section class="">
+            <h1 class="font-montserrat text-xl font-bold text-center">As melhores marcas estão aqui</h1>
+
+            <div class="flex flex-wrap justify-between items-baseline mt-5">
+                <img src="icons/adidas.svg" alt="" class="w-16">
+                <img src="icons/viamarte.svg" alt="" class="w-24">
+                <img src="icons/bebece.svg" alt="" class="w-20">
+                <img src="icons/dumond.svg" alt="" class="w-24">
+            </div>
+        </section>
     </main>
+
+
+    <footer class="mt-10">
+        <section class=" bg-orange p-2 p-5">
+            <div>
+                <h1 class="font-bold text-md font-montserrat text-white uppercase">Seja o primeiro a receber nossas ofertas e novidades exclusivas</h1>
+            </div>
+
+            <form>
+                <h1 class="text-xs text-white">Nos informe o seu e-mail e nome para o melhor atendimento!</h1>
+
+                <label class="flex mt-3 gap-1 border-b border-white w-40">
+                    <img src="icons/email.svg" alt="" class="w-4">
+                    <input type="text" class= "input bg-orange text-xs p-2 outline-none text-white" placeholder="seuemail@email.com">
+                </label>
+
+                <label class="flex mt-3 gap-1 border-b border-white w-40">
+                    <img src="icons/user.svg" alt="" class="w-4">
+                    <input type="text" class= "input bg-orange text-xs p-2 outline-none text-white" placeholder="Seu nome">
+                </label>
+            </form>
+        </section>
+    </footer>
 </template>
