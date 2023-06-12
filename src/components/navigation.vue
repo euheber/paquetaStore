@@ -56,12 +56,6 @@
   </header>
 </template>
 
-<script setup lang="ts">
-import {ref} from 'vue';
-
-let  productsInCart = ref<number | string>()
-
-</script>
 
 
 
