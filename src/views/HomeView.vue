@@ -23,8 +23,6 @@ type Mask = [
     }
 ]
 
-
-
 let shoeList = ref<Mask>()
 
 onMounted(async () => {
