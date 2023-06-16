@@ -1,3 +1,11 @@
+<script lang="ts" setup>
+import { watch } from 'vue';
+import  UserCart  from "@/stores/shopcart"
+
+const shoes = UserCart()
+ 
+</script>
+
 <template>
   <header>
     <div class="bg-orange py-4">
@@ -19,7 +27,7 @@
     </div>
 
     <nav class="pt-1 max-w-5xl m-auto  px-2">
-       <div class="flex justify-between items-center">
+      <div class="flex justify-between items-center">
         <a href="/" class="">
           <img src="images/logo.png" alt="Logomarca Paquetá" class="w-40">
         </a>
@@ -27,23 +35,25 @@
         <ul class="flex gap-5">
           <li class="relative">
             <img src="icons/heart.svg" alt="ícone de lista de desejos" class="w-7">
-            <span class="absolute flex justify-center items-center bottom-4 left-5 bg-yellowish w-6 rounded-xl text-white font-normal">
+            <span
+              class="absolute flex justify-center items-center bottom-4 left-5 bg-yellowish w-6 rounded-xl text-white font-normal">
               1
             </span>
           </li>
           <li class="relative">
             <img src="icons/bag.svg" alt="ícone de carrinho de compras" class="w-7">
-            <span class="absolute flex justify-center items-center bottom-4 left-5 bg-yellowish w-6 rounded-xl text-white font-normal">
-              3
+            <span
+              class="absolute flex justify-center items-center bottom-4 left-5 bg-yellowish w-6 rounded-xl text-white font-normal">
+              {{ shoes.shoes.length }}
             </span>
           </li>
           <li>
             <img src="icons/login.svg" alt="ícone de login" class="w-7">
           </li>
         </ul>
-       </div>
+      </div>
 
-       <div class="sections mt-3">
+      <div class="sections mt-3">
         <ul class="flex justify-center flex-wrap gap-6">
           <li><a href="/" class="text-sm">Novidades</a></li>
           <li><a href="/" class="text-sm">Feminino</a></li>
@@ -51,7 +61,7 @@
           <li><a href="/" class="text-sm">Paquetá-esportes</a></li>
           <li><a href="/" class="text-sm">Outlet</a></li>
         </ul>
-       </div>
+      </div>
     </nav>
   </header>
 </template>
