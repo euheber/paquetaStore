@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { watch } from 'vue';
 import  UserCart  from "@/stores/shopcart"
+import UserWishlist from "@/stores/wishlist"
 
 const shoes = UserCart()
- 
+const wishlist = UserWishlist()
 </script>
 
 <template>
@@ -37,7 +37,7 @@ const shoes = UserCart()
             <img src="icons/heart.svg" alt="ícone de lista de desejos" class="w-7">
             <span
               class="absolute flex justify-center items-center bottom-4 left-5 bg-yellowish w-6 rounded-xl text-white font-normal">
-              1
+              {{ wishlist.wishlist.length }}
             </span>
           </li>
           <li class="relative">

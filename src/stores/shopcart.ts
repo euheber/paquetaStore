@@ -1,10 +1,16 @@
 import { defineStore } from "pinia"
 import { ref } from "vue"
 
-type Mask = {
-  id: string
-  name: string
-  price: number
+interface Mask {
+  description: string,
+  id: string,
+  image: string,
+  name: string,
+  price: {
+    value: number,
+    discount: number
+  },
+  soldout: boolean
   quantity: number
 }
 
@@ -13,26 +19,24 @@ const shopcart = defineStore("cart", () => {
   const shoes = reference.value
   let total = ref(0)
 
-  function insertShoe(shoe: Mask) {
+  const insertShoe = (shoe: Mask)=> {
     const item = shoes.find((shoeExists) => shoeExists.id === shoe.id)
 
     if (!item) {
       shoes.push(shoe)
-      update()
     } else {
       item.quantity++
-      update()
     }
+    
+    update()
   }
 
-  function getShoes(): typeof shoes {
+  const getShoes = (): typeof shoes => {
     return shoes
   }
 
-  function update(): void {
-    shoes.forEach(sapato => {
-      total.value += (sapato.price * sapato.quantity)
-    })
+  const update = ():void =>{
+    total.value = Number(shoes.reduce((acc, current) =>  acc + (current.price.value * current.quantity), 0).toFixed(2))
   }
 
   return { shoes, insertShoe, getShoes }
