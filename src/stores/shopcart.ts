@@ -1,18 +1,6 @@
 import { defineStore } from "pinia"
 import { ref } from "vue"
-
-interface Mask {
-  description: string,
-  id: string,
-  image: string,
-  name: string,
-  price: {
-    value: number,
-    discount: number
-  },
-  soldout: boolean
-  quantity: number
-}
+import type { Mask } from "@/types/shopcart"
 
 const shopcart = defineStore("cart", () => {
   const reference = ref<Mask[]>([])
@@ -35,9 +23,7 @@ const shopcart = defineStore("cart", () => {
     return shoes
   }
 
-  const update = ():void =>{
-    total.value = Number(shoes.reduce((acc, current) =>  acc + (current.price.value * current.quantity), 0).toFixed(2))
-  }
+  const update = () => total.value = Number(shoes.reduce((acc, current) =>  acc + (current.price.value * current.quantity), 0).toFixed(2))
 
   return { shoes, insertShoe, getShoes }
 })

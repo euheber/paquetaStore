@@ -1,16 +1,6 @@
 import { defineStore } from "pinia"
 import { ref } from "vue"
-interface Mask {
-  description: string
-  id: string
-  image: string
-  name: string
-  price: {
-    value: number
-    discount: number
-  }
-  soldout: boolean
-}
+import type { Mask } from "@/types/shoe"
 
 const wishlist = defineStore("wishlist", () => {
   const reference = ref<Mask[]>([])

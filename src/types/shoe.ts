@@ -1,4 +1,4 @@
-export default interface Mask {
+export type Mask = {
     description: string,
     id: string,
     image: string,

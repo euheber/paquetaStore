@@ -6,24 +6,11 @@ import card from '@/components/shoe/card.vue';
 import { register } from 'swiper/element/bundle';
 import { onMounted } from 'vue';
 import { ref } from 'vue';
+import type { Mask } from "@/types/shoe"
 
 register();
 
-type Mask = [
-    {
-        description: string,
-        id: string,
-        image: string,
-        name: string,
-        price: {
-            value: number,
-            discount: number
-        },
-        soldout: boolean
-    }
-]
-
-let shoeList = ref<Mask>()
+let shoeList = ref<Mask[]>()
 
 onMounted(async () => {
     const api = await fetch("https://api.brchallenges.com/api/paqueta/shoes")

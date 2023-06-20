@@ -2,26 +2,16 @@
 import buttonVue from '../slots/button.vue';
 import UserStore from "@/stores/shopcart"
 import UserWishlist from "@/stores/wishlist"
+import type { Mask } from "@/types/shoe"
 import { ref } from 'vue';
+
 const { insertShoe } = UserStore()
-const {pushShoe} = UserWishlist()
+const { pushShoe } = UserWishlist()
 
-interface Mask {
-  description: string,
-  id: string,
-  image: string,
-  name: string,
-  price: {
-    value: number,
-    discount: number
-  },
-  soldout: boolean
-}
-
-const props = defineProps<{ shoe: Mask }>()
+const props = defineProps<{ shoe:Mask }>()
 let shoeExists = ref()
 
-const wishlistShoe = () => { 
+const wishlistShoe = () => {
   shoeExists.value = pushShoe(props.shoe).value
 }
 
@@ -43,8 +33,8 @@ const wishlistShoe = () => {
       <span class="text-xs mr-auto mb-3 font-montserrat">
         OU 9X R${{ (props.shoe.price.value / 9).toFixed(2) }}
       </span>
-      <buttonVue class="mr-auto" @click="insertShoe({...props.shoe, quantity: 1})">
-        Comprar
+      <buttonVue class="mr-auto text-xs font-bold" @click="insertShoe({ ...props.shoe, quantity: 1 })">
+        Adicionar ao carrinho
       </buttonVue>
     </div>
   </div>
