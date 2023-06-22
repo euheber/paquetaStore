@@ -2,8 +2,8 @@
 import buttonVue from '../slots/button.vue';
 import UserStore from "@/stores/shopcart"
 import UserWishlist from "@/stores/wishlist"
-import type { Mask } from "@/types/shoe"
 import { ref } from 'vue';
+import type { Mask } from "@/types/shoe"
 
 const { insertShoe } = UserStore()
 const { pushShoe } = UserWishlist()
@@ -15,9 +15,7 @@ const wishlistShoe = () => {
   shoeExists.value = pushShoe(props.shoe).value
 }
 
-
-const timesX = Math.floor(Math.random() * 12) + 2
-
+const timesX = Math.floor(Math.random() * 15) + 3
 </script>
 
 <template>
@@ -26,7 +24,6 @@ const timesX = Math.floor(Math.random() * 12) + 2
     <div class="w-40 flex flex-col justify-center items-center">
       <button class="ml-auto" @click="wishlistShoe">
         <i class="fa-regular fa-heart text-orange" :class="[shoeExists ? 'fa-solid fa-heart' : 'fa-regular fa-heart']"></i>
-
       </button>
       <img :src="props.shoe.image" alt="teste" class="h-28 w-36 mb-6">
       <p class="text-xs text-shadeblack mb-3 font-montserrat">{{ props.shoe.name }}</p>

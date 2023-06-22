@@ -28,20 +28,22 @@ const wishlist = UserWishlist()
 
     <nav class="pt-1 max-w-5xl m-auto  px-2">
       <div class="flex justify-between items-center">
-        <a href="/" class="">
+        <router-link to="/">
           <img src="images/logo.png" alt="Logomarca Paquetá" class="w-40">
-        </a>
+        </router-link>
 
         <ul class="flex gap-5">
           <li class="relative">
-            <img src="icons/heart.svg" alt="ícone de lista de desejos" class="w-7">
+            <a href=""><img src="icons/heart.svg" alt="ícone de lista de desejos" class="w-7"></a>
             <span
               class="absolute flex justify-center items-center bottom-4 left-5 bg-yellowish w-6 rounded-xl text-white font-normal">
               {{ wishlist.wishlist.length }}
             </span>
           </li>
           <li class="relative">
-            <img src="icons/bag.svg" alt="ícone de carrinho de compras" class="w-7">
+            <router-link to="/carrinho">
+              <img src="icons/bag.svg" alt="ícone de carrinho de compras" class="w-7">
+            </router-link>
             <span
               class="absolute flex justify-center items-center bottom-4 left-5 bg-yellowish w-6 rounded-xl text-white font-normal">
               {{ shoes.shoes.length }}
