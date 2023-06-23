@@ -34,7 +34,7 @@ const wishlist = UserWishlist()
 
         <ul class="flex gap-5">
           <li class="relative">
-            <a href=""><img src="icons/heart.svg" alt="ícone de lista de desejos" class="w-7"></a>
+            <a href=""><img src="/icons/heart.svg" alt="ícone de lista de desejos" class="w-7"></a>
             <span
               class="absolute flex justify-center items-center bottom-4 left-5 bg-yellowish w-6 rounded-xl text-white font-normal">
               {{ wishlist.wishlist.length }}
