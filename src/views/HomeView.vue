@@ -89,7 +89,7 @@ onMounted(async () => {
         <div class="shoes mt-10">
             <div class="shoe flex flex-col gap-2 justify-center items-center p-2">
                 <images sex="Calçados femininos" position="left-10" filter="bg-gradient-to-r ">
-                    <img src="images/calcados-femininos.png" alt="Calçado Feminino">
+                    <img src="/images/calcados-femininos.png" alt="Calçado Feminino">
                 </images>
                 <div class="info">
                     <p class="text-sm font-medium">Escolher o seu sapato favorito entre nossa
