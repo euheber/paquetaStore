@@ -45,7 +45,7 @@ onMounted(async () => {
         <ul class="m-auto w-84 grid grid-cols-2 gap-4">
 
             <li class="flex gap-3  items-center">
-                <img src="icons/location.svg" alt="" class="w-8 h-8">
+                <img src="/icons/creditcard.svg" alt="" class="w-8 h-8">
                 <div>
                     <span class="font-normal text-white text-xs">Pague em até 10x</span>
                     <p class="font-bold text-white text-xs">Sem juros*</p>
@@ -53,7 +53,7 @@ onMounted(async () => {
             </li>
 
             <li class="flex gap-3 items-center">
-                <img src="icons/location.svg" alt="" class="w-8 h-8">
+                <img src="/icons/location.svg" alt="" class="w-8 h-8">
                 <div>
                     <span class="font-normal text-white text-xs">Retire grátis</span>
                     <p class="font-bold text-white text-xs">Em nossas lojas</p>
@@ -61,7 +61,7 @@ onMounted(async () => {
             </li>
 
             <li class="flex gap-3 items-center">
-                <img src="icons/discount.svg" alt="" class="w-8 h-8">
+                <img src="/icons/discount.svg" alt="" class="w-8 h-8">
                 <div>
                     <span class="font-normal text-white text-xs">Ganhe 20% de</span>
                     <p class="font-bold text-white text-xs">desconto</p>
@@ -69,7 +69,7 @@ onMounted(async () => {
             </li>
 
             <li class="flex gap-3 items-center">
-                <img src="icons/delivery.svg" alt="" class="w-8 h-8">
+                <img src="/icons/delivery.svg" alt="" class="w-8 h-8">
                 <div>
                     <span class="font-normal text-white text-xs">Frente grátis para</span>
                     <p class="font-bold text-white text-xs">regiões sul e sudeste</p>
@@ -77,7 +77,7 @@ onMounted(async () => {
             </li>
 
             <li class="flex gap-3 items-center">
-                <img src="icons/change.svg" alt="" class="w-8 h-8">
+                <img src="/icons/change.svg" alt="" class="w-8 h-8">
                 <div>
                     <span class="font-normal text-white text-xs">Primeira troca grátis</span>
 
@@ -105,7 +105,7 @@ onMounted(async () => {
 
             <div class="shoe flex flex-col gap-2 justify-center items-center p-2">
                 <images sex="Calçados masculino" position="right-10" filter="bg-gradient-to-l ">
-                    <img src="images/calcados-masculinos.png" alt="">
+                    <img src="/images/calcados-masculinos.png" alt="">
                 </images>
 
                 <div class="info text-sm font-medium">
@@ -124,7 +124,7 @@ onMounted(async () => {
         <div class="outlet mt-10">
             <div class="flex gap-4 justify-center items-center">
                 <div class="logo w-36 flex flex-col">
-                    <img src="images/logo.png" alt="PaquetáStore" class="w-32">
+                    <img src="/images/logo.png" alt="PaquetáStore" class="w-32">
                     <span class="text-3xl text-orange font-bold uppercase self-end">Outlet</span>
                 </div>
 
@@ -174,10 +174,10 @@ onMounted(async () => {
             <h1 class="font-montserrat text-xl font-bold text-center">As melhores marcas estão aqui</h1>
 
             <div class="flex flex-wrap justify-between items-baseline mt-5">
-                <img src="icons/adidas.svg" alt="" class="w-16">
-                <img src="icons/viamarte.svg" alt="" class="w-24">
-                <img src="icons/bebece.svg" alt="" class="w-20">
-                <img src="icons/dumond.svg" alt="" class="w-24">
+                <img src="/icons/adidas.svg" alt="" class="w-16">
+                <img src="/icons/viamarte.svg" alt="" class="w-24">
+                <img src="/icons/bebece.svg" alt="" class="w-20">
+                <img src="/icons/dumond.svg" alt="" class="w-24">
             </div>
         </section>
     </main>
@@ -232,39 +232,39 @@ onMounted(async () => {
             <h1 class="text-lg font-bold">Formas de pagamento</h1>
 
             <div class="grid grid-cols-3 gap-5 mt-5 justify-center items-center">
-                <img src="icons/mastercard.svg" alt="Bandeira Mastercard">
-                <img src="icons/americanexpress.svg" alt="Bandeira American Express">
-                <img src="icons/elo.svg" alt="Bandeira Elo">
-                <img src="icons/paqueta.svg" alt="Bandeira Paqueta">
-                <img src="icons/gaston.svg" alt="Bandeira Gaston">
-                <img src="icons/visa.png" alt="Bandeira Visa">
-                <img src="icons/hipercard.png" alt="Bandeira Hipercard">
-                <img src="icons/itau.png" alt="Bandeira Itau">
-                <img src="icons/boleto.svg" alt="Bandeira boleto bancário">
+                <img src="/icons/mastercard.svg" alt="Bandeira Mastercard">
+                <img src="/icons/americanexpress.svg" alt="Bandeira American Express">
+                <img src="/icons/elo.svg" alt="Bandeira Elo">
+                <img src="/icons/paqueta.svg" alt="Bandeira Paqueta">
+                <img src="/icons/gaston.svg" alt="Bandeira Gaston">
+                <img src="/icons/visa.png" alt="Bandeira Visa">
+                <img src="/icons/hipercard.png" alt="Bandeira Hipercard">
+                <img src="/icons/itau.png" alt="Bandeira Itau">
+                <img src="/icons/boleto.svg" alt="Bandeira boleto bancário">
             </div>
 
             <h1 class="text-lg font-bold mt-4">Redes sociais</h1>
 
             <div class="flex gap-2 mt-2">
-                <img src="icons/instagram.svg" alt="Bandeira">
-                <img src="icons/facebook.svg" alt="Bandeira">
-                <img src="icons/twitter.svg" alt="Bandeira">
-                <img src="icons/youtube.svg" alt="Bandeira">
-                <img src="icons/pinterest.svg" alt="Bandeira">
+                <img src="/icons/instagram.svg" alt="Bandeira">
+                <img src="/icons/facebook.svg" alt="Bandeira">
+                <img src="/icons/twitter.svg" alt="Bandeira">
+                <img src="/icons/youtube.svg" alt="Bandeira">
+                <img src="/icons/pinterest.svg" alt="Bandeira">
             </div>
         </section>
 
         <section class="p-5 max-w-xs">
             <h1 class="font-bold text-lg">Premios e certificações</h1>
 
-            <img src="icons/certificate.png" alt="Certificado de segurança" class="mt-5">
-            <img src="icons/blindado.svg" alt="Bandeira" class="mt-5">
+            <img src="/icons/certificate.png" alt="Certificado de segurança" class="mt-5">
+            <img src="/icons/blindado.svg" alt="Bandeira" class="mt-5">
         </section>
 
         <section class="bg-shadeblack p-3">
             <div class="flex items-center justify-center gap-3 max-w-3xl">
                 <h1 class="uppercase text-white font-bold text-sm">uma empresa do grupo</h1>
-                <img src="icons/company.png" alt="Bandeira" class="w-40">
+                <img src="/icons/company.png" alt="Bandeira" class="w-40">
             </div>
         </section>
     </footer>
