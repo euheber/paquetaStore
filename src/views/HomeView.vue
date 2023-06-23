@@ -194,13 +194,13 @@ onMounted(async () => {
                 <h1 class="text-xs text-white">Nos informe o seu e-mail e nome para o melhor atendimento!</h1>
 
                 <label class="flex mt-3 gap-1 border-b border-white w-40">
-                    <img src="icons/email.svg" alt="" class="w-4">
+                    <img src="/icons/email.svg" alt="" class="w-4">
                     <input type="text" class="input bg-orange text-xs p-2 outline-none text-white"
                         placeholder="seuemail@email.com">
                 </label>
 
                 <label class="flex mt-3 gap-1 border-b border-white w-40">
-                    <img src="icons/user.svg" alt="" class="w-4">
+                    <img src="/icons/user.svg" alt="" class="w-4">
                     <input type="text" class="input bg-orange text-xs p-2 outline-none text-white" placeholder="Seu nome">
                 </label>
 
