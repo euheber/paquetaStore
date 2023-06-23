@@ -11,6 +11,7 @@ export default {
         "yellowish":"#FFCD29",
         "white":"#FFF",
         "shadeblack":"#383838",
+        "light-gray":"#e6dddc",
         "grandientOne":" #F99500",
       },
       fontFamily: {

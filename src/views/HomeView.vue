@@ -45,7 +45,7 @@ onMounted(async () => {
         <ul class="m-auto w-84 grid grid-cols-2 gap-4">
 
             <li class="flex gap-3  items-center">
-                <img src="icons/creditcard.svg" alt="" class="w-8 h-8">
+                <img src="icons/location.svg" alt="" class="w-8 h-8">
                 <div>
                     <span class="font-normal text-white text-xs">Pague em até 10x</span>
                     <p class="font-bold text-white text-xs">Sem juros*</p>

@@ -1,5 +1,6 @@
 <template>
-    <main class="px-2 mt-10">
+    <main class="mt-10 p-2">
+      <div class="bg-light-gray rounded-sm pt-1">
         <div class=" max-w-xs leading-none">
             <span class="text-shadeblack font-montserrat">Paqueta</span> > <span
                 class="border-b border-orange">Sacola</span>
@@ -12,10 +13,11 @@
                 <h1 class="font-bold font-montserrat text-md mt-5">Itens</h1>
             </div>
 
-            <ul class="">
+            <ul class="flex flex-col gap-2">
                 <shoeInCart v-for="shoe in shoes" :key="shoe.id" :shoe='shoe'/>
             </ul>
         </section>
+      </div>
     </main>
 </template>
 
