@@ -4,7 +4,7 @@ import UserStore from "@/stores/shopcart"
 import UserWishlist from "@/stores/wishlist"
 import { ref } from 'vue';
 import type { Mask } from "@/types/shoe"
-
+import { RouterLink } from 'vue-router'
 const { insertShoe } = UserStore()
 const { pushShoe } = UserWishlist()
 
@@ -25,7 +25,9 @@ const timesX = Math.floor(Math.random() * 15) + 3
       <button class="ml-auto" @click="wishlistShoe">
         <i class="fa-regular fa-heart text-orange" :class="[shoeExists ? 'fa-solid fa-heart' : 'fa-regular fa-heart']"></i>
       </button>
-      <img :src="props.shoe.image" alt="teste" class="h-28 w-36 mb-6">
+      <router-link :to="`/sapato/${props.shoe.id}`">
+        <img :src="props.shoe.image" alt="teste" class="h-28 w-36 mb-6">
+      </router-link>
       <p class="text-xs text-shadeblack mb-3 font-montserrat">{{ props.shoe.name }}</p>
       <span class="block font-bold text-sm text-shadeblack mr-auto font-montserrat">
         R${{ props.shoe.price.value }}

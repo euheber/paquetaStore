@@ -13,6 +13,7 @@ export default {
         "shadeblack":"#383838",
         "light-gray":"#e6dddc",
         "grandientOne":" #F99500",
+        "success":" #65C239",
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
