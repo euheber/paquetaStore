@@ -16,3 +16,7 @@
 .input::placeholder {
   color: white;
 }
+
+body{
+  scroll-behavior: smooth;
+}

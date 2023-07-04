@@ -15,6 +15,7 @@ const wishlistShoe = () => {
   shoeExists.value = pushShoe(props.shoe).value
 }
 
+
 const timesX = Math.floor(Math.random() * 15) + 3
 </script>
 
