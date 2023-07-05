@@ -21,29 +21,30 @@ onMounted(async () => {
 
 </script>
 
+<!-- md:w-[400px] pr-10 ml-auto mr-16 -->
 <template>
-    <div class="banner-hero relative h-40">
-        <div class="box absolute text-sm top-4 right-1">
-            <h1 class="text-shadeblack font-bold text-xl">
-                Tênis Casual
-            </h1>
-            <span class="text-orange text-xl font-medium">Masculino</span>
+    <div class="banner-hero h-40 mt-5 lg:h-[500px] px-1 items-end lg:pt-32">
+        <div class="w-44 ml-auto pl-2 md:mr-10 lg:w-96 lg:mr-0 lg:pl-12">
+                <h1 class="text-shadeblack font-bold text-xl lg:text-5xl">
+                    Tênis Casual
+                </h1>
+                <span class="text-orange text-xl font-medium">Masculino</span>
 
-            <div class="price">
-                <span class="font-medium text-shadeblack text-xs">A partir de</span>
-                <p class="text-xl text-shadeblack font-bold">
-                    R$ 79,99
-                </p>
+                <div class="price">
+                    <span class="font-medium text-shadeblack text-xs">A partir de</span>
+                    <p class="text-xl text-shadeblack font-bold lg:text-2xl">
+                        R$ 79,99
+                    </p>
 
-                <buttonSlot>
-                    Aproveite
-                </buttonSlot>
-            </div>
+                    <buttonSlot>
+                        Aproveite
+                    </buttonSlot>
+                </div>
         </div>
     </div>
+
     <div class=" bg-orange p-4">
         <ul class="m-auto w-84 grid grid-cols-2 gap-4">
-
             <li class="flex gap-3  items-center">
                 <img src="/icons/creditcard.svg" alt="" class="w-8 h-8">
                 <div>

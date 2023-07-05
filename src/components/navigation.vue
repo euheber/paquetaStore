@@ -13,14 +13,14 @@ const wishlist = UserWishlist()
         <p class="text-white text-sm font-normal">Loja de Calçados e Moda Online</p>
 
         <div class="flex gap-4 ">
-          <div class="flex">
+          <div class="flex md: items-center justify-center">
             <img src="/icons/phone.svg" alt="Icone de fone">
-            <span class="hidden">Fale conosco</span>
+            <span class="hidden text-white font-montserrat ml-1 md:block">Fale conosco</span> 
           </div>
 
-          <div class="flex">
+          <div class="flex items-center justify-center">
             <img src="/icons/location.svg" alt="Icone de fone">
-            <span class="hidden">Encontrar uma loja física</span>
+            <span class="hidden text-white font-montserrat ml-1 md:block">Encontrar uma loja física</span>
           </div>
         </div>
       </div>

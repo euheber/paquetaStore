@@ -8,9 +8,9 @@
 
 .banner-hero {
   background-image: url(/images/banner-hero.png);
-  background-position: center 25%;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
 }
 
 .input::placeholder {
