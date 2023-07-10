@@ -23,8 +23,9 @@ onMounted(async () => {
 
 <!-- md:w-[400px] pr-10 ml-auto mr-16 -->
 <template>
-    <div class="banner-hero h-40 mt-5 lg:h-[500px] px-1 items-end lg:pt-32">
-        <div class="w-44 ml-auto pl-2 md:mr-10 lg:w-96 lg:mr-0 lg:pl-12">
+    <div class="banner-hero h-40 mt-5 md:h-[250px] md:pt-10 lg:h-[500px] lg:pt-32">
+        <div class="max-w-6xl m-auto">
+            <div class="w-40 lg:w-[350px] ml-auto lg:mr-0">
                 <h1 class="text-shadeblack font-bold text-xl lg:text-5xl">
                     Tênis Casual
                 </h1>
@@ -40,12 +41,13 @@ onMounted(async () => {
                         Aproveite
                     </buttonSlot>
                 </div>
+            </div>
         </div>
     </div>
 
     <div class=" bg-orange p-4">
-        <ul class="m-auto w-84 grid grid-cols-2 gap-4">
-            <li class="flex gap-3  items-center">
+        <ul class="m-auto max-w-5xl grid grid-cols-2 gap-4 lg:grid-cols-5 lg:grid-rows-1 lg:gap-2">
+            <li class="flex gap-3 items-center">
                 <img src="/icons/creditcard.svg" alt="" class="w-8 h-8">
                 <div>
                     <span class="font-normal text-white text-xs">Pague em até 10x</span>
@@ -86,16 +88,33 @@ onMounted(async () => {
             </li>
         </ul>
     </div>
-    <main class="p-2">
+    <main class="p-2 max-w-5xl  m-auto">
         <div class="shoes mt-10">
-            <div class="shoe flex flex-col gap-2 justify-center items-center p-2">
-                <images sex="Calçados femininos" position="left-10" filter="bg-gradient-to-r ">
+            <div class="flex flex-col gap-2 justify-center items-center lg:flex-row">
+                <images sex="Calçados femininos" position="left-10" filter="bg-gradient-to-r">
                     <img src="/images/calcados-femininos.png" alt="Calçado Feminino">
                 </images>
-                <div class="info">
-                    <p class="text-sm font-medium">Escolher o seu sapato favorito entre nossa
+                <div class="max-w-[500px] md:text-center lg:text-right lg:mb-20">
+                    <p class="text-sm font-medium lg:text-lg font-montserrat">Escolher o seu sapato favorito entre nossa
                         <span class="font-bold">variedade de modelos e cores</span> não será uma tarefa
                         fácil, mas o que uma mulher não consegue fazer?
+                    </p>
+
+                    <buttonSlot class="px-24 mt-5 mb-5">
+                        Conferir
+                    </buttonSlot>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2 justify-center items-center lg:flex-row lg:mt-10">
+                <images sex="Calçados masculino" position="right-10" filter="bg-gradient-to-l" class="lg:order-2">
+                    <img src="/images/calcados-masculinos.png" alt="">
+                </images>
+
+                <div class=" max-w-[500px] md:text-center lg:text-left lg:mb-20 lg:order-1">
+                    <p class="text-sm lg:text-lg font-montserrat">
+                        Tenha em seu guarda roupa sapatos de qualidade e confortáveis, para o dia a dia, trabalho e até
+                        mesmo para praticar esportes!
                     </p>
 
                     <buttonSlot class="px-24 mt-5">
@@ -103,39 +122,24 @@ onMounted(async () => {
                     </buttonSlot>
                 </div>
             </div>
-
-            <div class="shoe flex flex-col gap-2 justify-center items-center p-2">
-                <images sex="Calçados masculino" position="right-10" filter="bg-gradient-to-l ">
-                    <img src="/images/calcados-masculinos.png" alt="">
-                </images>
-
-                <div class="info text-sm font-medium">
-                    <p class="text-sm">
-                        Tenha em seu guarda roupa sapatos de qualidade e confortáveis, para o dia a dia, trabalho e até
-                        mesmo para praticar esportes!
-                    </p>
-
-                    <buttonSlot class="px-24 mt-5 ml-40">
-                        Conferir
-                    </buttonSlot>
-                </div>
-            </div>
         </div>
 
         <div class="outlet mt-10">
-            <div class="flex gap-4 justify-center items-center">
+            <div class="flex gap-4 justify-center items-center lg:justify-between">
                 <div class="logo w-36 flex flex-col">
                     <img src="/images/logo.png" alt="PaquetáStore" class="w-32">
                     <span class="text-3xl text-orange font-bold uppercase self-end">Outlet</span>
                 </div>
 
-                <p class="text-sm">
-                    Você também pode escolher o seu novo sapato favorito de acordo com a sua numeração.
-                </p>
+                <div class="max-w-lg lg:text-right">
+                    <p class="text-sm lg:text-lg">
+                        Você também pode escolher o seu novo sapato favorito de acordo com a sua numeração.
+                    </p>
+                </div>
             </div>
 
 
-            <ul class="mt-5 flex gap-2 flex-wrap">
+            <ul class="mt-5 flex gap-2 flex-wrap lg:justify-around">
                 <shoeSize>33</shoeSize>
                 <shoeSize>34</shoeSize>
                 <shoeSize>35</shoeSize>
@@ -151,7 +155,7 @@ onMounted(async () => {
             </ul>
         </div>
 
-        <section class="mt-5">
+        <section class="mt-10">
             <div class="header flex justify-between items-center">
                 <h1 class="font-bold text-lg uppercase">Destaques</h1>
                 <a href="/" class="text-sm border-b-orange border-b">Conferir tudo</a>
@@ -171,7 +175,7 @@ onMounted(async () => {
             </swiper-container>
         </section>
 
-        <section class="">
+        <section class="mt-10 mb-10">
             <h1 class="font-montserrat text-xl font-bold text-center">As melhores marcas estão aqui</h1>
 
             <div class="flex flex-wrap justify-between items-baseline mt-5">

@@ -1,5 +1,4 @@
 <template>
-
         <div class="img relative">
             <slot></slot>
 

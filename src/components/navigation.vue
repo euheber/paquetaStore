@@ -27,7 +27,7 @@ const wishlist = UserWishlist()
     </div>
 
     <nav class="pt-1 max-w-5xl m-auto  px-2">
-      <div class="flex justify-between items-center">
+      <div class="flex justify-between items-center mt-2">
         <router-link to="/">
           <img src="/images/logo.png" alt="Logomarca Paquetá" class="w-40">
         </router-link>
