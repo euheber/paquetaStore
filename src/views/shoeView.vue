@@ -3,12 +3,13 @@ import shoeSize from "@/components/shoe/shoeSize.vue"
 import slotBtn from "@/components/slots/button.vue"
 import card from "@/components/shoe/card.vue"
 import { onMounted, ref } from "vue";
-import { useRoute } from "vue-router";
+import { RouterLink, useRoute } from "vue-router";
 import { register } from "swiper/element";
+import wishlist from "@/stores/wishlist";
 import type { Mask } from "@/types/shoe"
 
 const route = useRoute()
-
+const { pushShoe } = wishlist()
 register()
 
 let shoe = ref<Mask>();
@@ -42,16 +43,18 @@ const timesX = Math.floor(Math.random() * 15) + 3
 
 </script>
 <template>
-  <main class="p-2 mt-5 relative" v-if="shoe">
+  <main class="p-2 mt-5 relative max-w-5xl m-auto" v-if="shoe">
     <span class="text-sm">Paqueta</span> > <span class="border-b border-orange text-sm">{{ shoe.name }}</span>
 
     <section>
-      <div class="img mt-8 w-80 m-auto flex flex-col gap-5">
+      <div class="img max-w-5xl m-auto flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-center">
         <div class="">
-          <img :src="shoe.image" alt="">
-          <div class="socials">
+
+            <img :src="shoe.image" alt="" class="h-96">
+
+          <div class="">
             <span class="text-sm">Compartilhe</span>
-            <ul class=" flex gap-2 mt-2">
+            <ul class=" flex gap-2">
               <li>
                 <img src="/icons/instagram.svg" alt="ícone do instragram">
               </li>
@@ -72,7 +75,7 @@ const timesX = Math.floor(Math.random() * 15) + 3
         </div>
         <div class="comprar mt-5">
           <button>
-            <i class="fa-regular fa-heart fa-xl text-orange"></i>
+            <i class="fa-regular fa-heart fa-xl text-orange"  @click="pushShoe(shoe)"></i>
           </button>
 
           <h1 class="font-montserrat text-xl font-bold">{{ shoe.name }}</h1>
@@ -137,7 +140,7 @@ const timesX = Math.floor(Math.random() * 15) + 3
         </div>
       </div>
 
-      <div class="description">
+      <div class="description mt-10">
         <h1 class="text-xl font-montserrat font-bold uppercase mt-5">Descrição do produto</h1>
         <p class="text-shadeblack text-md font-montserrat mt-3">
           {{ shoe.description }}
@@ -146,7 +149,7 @@ const timesX = Math.floor(Math.random() * 15) + 3
     </section>
   </main>
 
-  <section class="mt-5 px-2">
+  <section class="max-w-5xl m-auto mt-5 px-2">
     <div class="header flex justify-between items-center">
       <h1 class="font-bold text-lg uppercase">Talvez possa lhe interessar</h1>
     </div>
