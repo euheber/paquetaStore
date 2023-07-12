@@ -2,14 +2,21 @@
 import buttonVue from '../slots/button.vue';
 import UserStore from "@/stores/shopcart"
 import UserWishlist from "@/stores/wishlist"
-import { ref } from 'vue';
-import type { Mask } from "@/types/shoe"
 import { RouterLink } from 'vue-router'
+import type { Mask } from "@/types/shoe"
+import { ref } from 'vue';
+import { onMounted } from 'vue';
+
 const { insertShoe } = UserStore() 
 const { pushShoe } = UserWishlist()
+const { checkIfShoeExists } = UserWishlist()
 
 const props = defineProps<{ shoe:Mask }>()
 let shoeExists = ref()
+
+onMounted(() => {
+  shoeExists.value = checkIfShoeExists(props.shoe.id).value
+})
 
 const wishlistShoe = () => {
   shoeExists.value = pushShoe(props.shoe).value

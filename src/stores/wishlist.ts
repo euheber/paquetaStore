@@ -21,7 +21,20 @@ const wishlist = defineStore("wishlist", () => {
     return shoeExists
   }
 
-  return { wishlist, pushShoe }
+  const checkIfShoeExists = (id:string) => { 
+    let shoeExists = ref()
+    const index = wishlist.findIndex(sapato => sapato.id == id)
+
+    if (index == -1) {
+      shoeExists.value = false
+    } else { 
+        shoeExists.value = true
+    }
+
+    return shoeExists
+  }
+
+  return { wishlist, pushShoe, checkIfShoeExists }
 })
 
 export default wishlist

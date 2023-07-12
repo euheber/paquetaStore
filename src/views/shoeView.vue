@@ -14,9 +14,10 @@ register()
 
 let shoe = ref<Mask>();
 let shoeList = ref<Mask[]>()
+let shoeExists = ref()
 
 onMounted(async () => {
-
+  window.scrollTo(0, 0);
   const id = route.params.id
   const data = await fetch(`https://api.brchallenges.com/api/paqueta/shoe/${id}`)
   const response = await data.json()
@@ -29,6 +30,12 @@ onMounted(async () => {
   shoeList.value = shoes.slice(20)
 
 })
+
+
+const wishlistShoe = (shoe:Mask) => {  
+  shoeExists.value = pushShoe(shoe).value
+}
+
 
 const updateRoute = async () => {
   const id = route.params.id
@@ -75,7 +82,7 @@ const timesX = Math.floor(Math.random() * 15) + 3
         </div>
         <div class="comprar mt-5">
           <button>
-            <i class="fa-regular fa-heart fa-xl text-orange"  @click="pushShoe(shoe)"></i>
+            <i class="fa-regular fa-heart fa-xl text-orange" :class="[shoeExists ? 'fa-solid fa-heart' : 'fa-regular fa-heart']"  @click="wishlistShoe(shoe)"></i>
           </button>
 
           <h1 class="font-montserrat text-xl font-bold">{{ shoe.name }}</h1>

@@ -21,7 +21,7 @@ onMounted(async () => {
 
 </script>
 
-<!-- md:w-[400px] pr-10 ml-auto mr-16 -->
+
 <template>
     <div class="banner-hero h-40 mt-5 md:h-[250px] md:pt-10 lg:h-[500px] lg:pt-32">
         <div class="max-w-6xl m-auto">
@@ -158,7 +158,10 @@ onMounted(async () => {
         <section class="mt-10">
             <div class="header flex justify-between items-center">
                 <h1 class="font-bold text-lg uppercase">Destaques</h1>
-                <a href="/" class="text-sm border-b-orange border-b">Conferir tudo</a>
+                <router-link to="/todosmodelos" class="text-sm border-b-orange border-b">
+                    Conferir tudo
+                </router-link>
+
             </div>
 
             <swiper-container :slidesPerView="'1'" :breakpoints="{
