@@ -95,7 +95,7 @@ onMounted(async () => {
                     <img src="/images/calcados-femininos.png" alt="Calçado Feminino">
                 </images>
                 <div class="max-w-[500px] md:text-center lg:text-right lg:mb-20">
-                    <p class="text-sm font-medium lg:text-lg font-montserrat">Escolher o seu sapato favorito entre nossa
+                    <p class="text-sm lg:text-lg font-montserrat">Escolher o seu sapato favorito entre nossa
                         <span class="font-bold">variedade de modelos e cores</span> não será uma tarefa
                         fácil, mas o que uma mulher não consegue fazer?
                     </p>

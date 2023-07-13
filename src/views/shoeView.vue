@@ -141,7 +141,7 @@ const timesX = Math.floor(Math.random() * 15) + 3
               </li>
             </ul>
 
-            <a href="" class="text-sm font-bold text-shadeblack mt-5 block">Guia de tamanhos</a>
+            <!-- <a href="" class="text-sm font-bold text-shadeblack mt-5 block">Guia de tamanhos</a> -->
             <slotBtn class="mt-5">Comprar</slotBtn>
           </div>
         </div>
