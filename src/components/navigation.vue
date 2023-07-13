@@ -1,9 +1,13 @@
 <script lang="ts" setup>
 import  UserCart  from "@/stores/shopcart"
 import UserWishlist from "@/stores/wishlist"
+import { useRoute } from "vue-router";
+
+const route = useRoute()
 
 const shoes = UserCart()
 const wishlist = UserWishlist()
+
 </script>
 
 <template>
@@ -55,7 +59,7 @@ const wishlist = UserWishlist()
         </ul>
       </div>
 
-      <div class="sections mt-3">
+      <div class="sections mt-3" v-if="route.name == 'home'">
         <ul class="flex justify-center flex-wrap gap-6">
           <li><a href="/" class="text-sm">Novidades</a></li>
           <li><a href="/" class="text-sm">Feminino</a></li>

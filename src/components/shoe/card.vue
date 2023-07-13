@@ -23,6 +23,8 @@ const wishlistShoe = () => {
 }
 
 const timesX = Math.floor(Math.random() * 15) + 3
+
+
 </script>
 
 <template>
@@ -37,8 +39,11 @@ const timesX = Math.floor(Math.random() * 15) + 3
       <router-link :to="`/sapato/${props.shoe.id}`">
         <img :src="props.shoe.image" alt="" class="h-28 w-36 mb-6">
       </router-link>
-      <p class="text-xs text-shadeblack mb-3 font-montserrat">{{ props.shoe.name }}</p>
-      <span class="block font-bold text-sm text-shadeblack mr-auto font-montserrat">
+      <p class="text-xs text-shadeblack mb-1 mr-auto font-montserrat">{{ props.shoe.name }}</p>
+      <span class="block font-bold text-sm text-shadeblack mr-auto font-montserrat" v-if="Number.isInteger(props.shoe.price.value)">
+        R${{ props.shoe.price.value }}.00
+      </span>
+      <span class="block font-bold text-sm text-shadeblack mr-auto font-montserrat" v-else>
         R${{ props.shoe.price.value }}
       </span>
       <span class="text-xs mr-auto mb-3 font-montserrat">
@@ -47,9 +52,9 @@ const timesX = Math.floor(Math.random() * 15) + 3
       <buttonVue v-if="!props.shoe.soldout" class=" text-xs font-bold w-full mt-auto" @click="insertShoe({ ...props.shoe, quantity: 1 })">
         Adicionar ao carrinho
       </buttonVue>
-      <buttonVue v-else  class=" text-xs font-bold hover:scale-100 mt-auto
+      <buttonVue v-else  class=" text-xs font-bold mt-auto
        w-full bg-orange " >
-        Me avisa quando chegar
+        Me avise quando chegar
       </buttonVue>
     </div>
   </div>
