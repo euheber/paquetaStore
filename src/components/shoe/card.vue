@@ -1,9 +1,9 @@
 <script lang= ts setup>
 import buttonVue from '../slots/button.vue';
-import UserStore from "@/stores/shopcart"
-import UserWishlist from "@/stores/wishlist"
-import { RouterLink } from 'vue-router'
-import type { Mask } from "@/types/shoe"
+import UserStore from "@/stores/shopcart";
+import UserWishlist from "@/stores/wishlist";
+import { RouterLink } from 'vue-router';
+import type { Mask } from "@/types/shoe";
 import { ref } from 'vue';
 import { onMounted } from 'vue';
 
@@ -24,7 +24,6 @@ const wishlistShoe = () => {
 
 const timesX = Math.floor(Math.random() * 15) + 3
 
-
 </script>
 
 <template>
@@ -41,10 +40,10 @@ const timesX = Math.floor(Math.random() * 15) + 3
       </router-link>
       <p class="text-xs text-shadeblack mb-1 mr-auto font-montserrat">{{ props.shoe.name }}</p>
       <span class="block font-bold text-sm text-shadeblack mr-auto font-montserrat" v-if="Number.isInteger(props.shoe.price.value)">
-        R${{ props.shoe.price.value }}.00
+        R$ {{ props.shoe.price.value }}.00
       </span>
       <span class="block font-bold text-sm text-shadeblack mr-auto font-montserrat" v-else>
-        R${{ props.shoe.price.value }}
+        R$ {{ props.shoe.price.value }}
       </span>
       <span class="text-xs mr-auto mb-3 font-montserrat">
         OU {{ timesX }}X de R$ {{ (props.shoe.price.value / timesX).toFixed(2) }}

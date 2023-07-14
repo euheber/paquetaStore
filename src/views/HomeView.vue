@@ -25,7 +25,7 @@ onMounted(async () => {
 <template>
     <div class="banner-hero h-40 mt-5 md:h-[250px] md:pt-10 lg:h-[500px] lg:pt-32">
         <div class="max-w-6xl m-auto">
-            <div class="w-40 lg:w-[350px] ml-auto lg:mr-0">
+            <div class="w-40 md:mr-5 lg:w-[350px] ml-auto lg:mr-0">
                 <h1 class="text-shadeblack font-bold text-xl lg:text-5xl">
                     Tênis Casual
                 </h1>
@@ -37,7 +37,7 @@ onMounted(async () => {
                         R$ 79,99
                     </p>
 
-                    <buttonSlot>
+                    <buttonSlot class="w-40">
                         Aproveite
                     </buttonSlot>
                 </div>

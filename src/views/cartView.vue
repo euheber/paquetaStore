@@ -1,7 +1,7 @@
 <template>
     <main class="mt-10 p-2">
-      <div class="bg-light-gray rounded-sm pt-1 max-w-5xl m-auto">
-        <div class=" max-w-xs leading-none">
+      <div class="bg-light-gray rounded-sm pt-1 max-w-5xl m-auto pt-2">
+        <div class=" max-w-xs leading-none ml-1">
             <span class="text-shadeblack font-montserrat">Paqueta</span> > <span
                 class="border-b border-orange">Carrinho</span>
         </div>
