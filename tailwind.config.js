@@ -14,6 +14,7 @@ export default {
         "light-gray":"#e6dddc",
         "grandientOne":" #F99500",
         "success":" #65C239",
+        "transparent":"rgba(0, 0, 0, 0.38)",
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],

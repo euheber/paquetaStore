@@ -14,9 +14,10 @@ A autora do layout é a design [**Ana Maria Almeida**](https://www.linkedin.com/
 
 ## 🚀 Tecnologias
 
-- [Item 1](http://localhost:3000/)
-- [Item 2](http://localhost:3000/)
-- [Item 3](http://localhost:3000/)
+- [Vue](https://vuejs.org)
+- [Typescript](https://www.typescriptlang.org)
+- [Pinia](https://pinia.vuejs.org)
+- [Tailwind](https://tailwindcss.com)
 
 ## 📝 Requisitos do desafio
 
