@@ -105,7 +105,7 @@ const timesX = Math.floor(Math.random() * 15) + 3
 
             <div v-else>
               <p class="font-montserrat text-2xl font-bold uppercase mt-2" v-if="Number.isInteger(shoe.price.value)">R$ {{
-                shoe.price.value }},00</p>
+                shoe.price.value }}.00</p>
               <p class="font-montserrat text-2xl font-bold uppercase mt-2" v-else>
                 R$ {{ (shoe.price.value).toFixed(2) }}
               </p>

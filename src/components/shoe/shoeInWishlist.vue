@@ -17,8 +17,10 @@ const props = defineProps<{ shoe: Mask }>()
             <h1 class="font-bold text-xl font-monteserrat">{{ props.shoe.name }}</h1>
             <p class="text-sm text-shadeblack font-montserrat">Código do produto: {{ props.shoe.id }}</p>
             <ul class="mt-5">
-                <li class="font-bold font-montserrat text-md">Preço: <span class="text-shadeblack text-sm">R$ {{
-                    props.shoe.price.value }}</span></li>
+                <li class="font-bold font-montserrat text-md" >Preço: 
+                    <span class="text-shadeblack text-sm"  v-if="Number.isInteger(props.shoe.price.value)">R$ {{props.shoe.price.value }}.00</span>
+                    <span class="text-shadeblack text-sm"  v-else>R$ {{props.shoe.price.value }}</span>
+                </li>
             </ul>
         </div>
 
