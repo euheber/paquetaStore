@@ -15,7 +15,10 @@
             <li class="font-bold font-montserrat text-md">Quantidade: <span class="text-shadeblack text-sm">{{ props.shoe.quantity }}</span> <i class="fa-solid fa-chevron-down" @click="removeQuantity(props.shoe.id)"></i> 
                 <i class="fa-solid fa-chevron-up" @click="insertShoe(props.shoe)"></i>
             </li>
-            <li class="font-bold font-montserrat text-md">Preço: <span class="text-shadeblack text-sm">R$ {{ props.shoe.price.value }}</span></li>
+            <li class="font-bold font-montserrat text-md">Preço: 
+                <span class="text-shadeblack text-sm" v-if="Number.isInteger(props.shoe.price.value)">R$ {{ props.shoe.price.value }}.00</span>
+                <span class="text-shadeblack text-sm" v-else>R$ {{ props.shoe.price.value }}</span>
+            </li>
         </ul>
     </div>
 

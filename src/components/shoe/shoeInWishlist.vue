@@ -23,7 +23,7 @@ const props = defineProps<{ shoe: Mask }>()
                 </li>
             </ul>
         </div>
-
+     
         <button class="mt-5 place-self-start" @click="pushShoe(props.shoe)"><i class="fa-regular fa-trash-can"></i>
             Remover</button>
     </li>

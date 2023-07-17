@@ -2,11 +2,17 @@
 import shoeSize from "@/components/shoe/shoeSize.vue"
 import slotBtn from "@/components/slots/button.vue"
 import card from "@/components/shoe/card.vue"
-import { onMounted, ref } from "vue";
-import { RouterLink, useRoute } from "vue-router";
+import { onMounted, ref, type Ref } from "vue";
+import { useRoute } from "vue-router";
 import { register } from "swiper/element";
-import wishlist from "@/stores/wishlist";
 import type { Mask } from "@/types/shoe"
+import wishlist from "@/stores/wishlist";
+import shoeModal from "@/components/shoe/shoeModal.vue"
+import UserShopCart from "@/stores/shopcart"
+
+const {insertShoe} = UserShopCart()
+
+const child = ref<typeof shoeModal | null>(null);
 
 const route = useRoute()
 const { pushShoe } = wishlist()
@@ -32,7 +38,7 @@ onMounted(async () => {
 })
 
 
-const wishlistShoe = (shoe:Mask) => {  
+const wishlistShoe = (shoe: Mask) => {
   shoeExists.value = pushShoe(shoe).value
 }
 
@@ -46,6 +52,14 @@ const updateRoute = async () => {
   window.scrollTo(0, 0);
 }
 
+const activeModal = () => {
+  if(child.value != null){
+    child.value.activeModal()
+  } else {
+    return
+  }
+}
+
 const timesX = Math.floor(Math.random() * 15) + 3
 
 </script>
@@ -57,7 +71,7 @@ const timesX = Math.floor(Math.random() * 15) + 3
       <div class="img max-w-5xl m-auto flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-center">
         <div class="">
 
-            <img :src="shoe.image" alt="" class="h-96">
+          <img :src="shoe.image" alt="" class="h-96">
 
           <div class="">
             <span class="text-sm">Compartilhe</span>
@@ -82,7 +96,8 @@ const timesX = Math.floor(Math.random() * 15) + 3
         </div>
         <div class="comprar mt-5">
           <button>
-            <i class="fa-regular fa-heart fa-xl text-orange" :class="[shoeExists ? 'fa-solid fa-heart' : 'fa-regular fa-heart']"  @click="wishlistShoe(shoe)"></i>
+            <i class="fa-regular fa-heart fa-xl text-orange"
+              :class="[shoeExists ? 'fa-solid fa-heart' : 'fa-regular fa-heart']" @click="wishlistShoe(shoe)"></i>
           </button>
 
           <h1 class="font-montserrat text-xl font-bold">{{ shoe.name }}</h1>
@@ -141,7 +156,9 @@ const timesX = Math.floor(Math.random() * 15) + 3
               </li>
             </ul>
 
-            <slotBtn class="mt-5" v-if="!shoe.soldout">Comprar</slotBtn>
+            <button class="mt-5 hidden lg:block" @click="activeModal">Guia de tamanho</button>
+
+            <slotBtn class="mt-5" v-if="!shoe.soldout" @click="insertShoe({...shoe, quantity: 1})">Comprar</slotBtn>
             <slotBtn class="mt-5" v-else>Me avise quando chegar</slotBtn>
           </div>
         </div>
@@ -174,5 +191,7 @@ const timesX = Math.floor(Math.random() * 15) + 3
       </swiper-slide>
     </swiper-container>
   </section>
+
+  <shoeModal ref="child" />
 </template>
 
