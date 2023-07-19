@@ -140,18 +140,18 @@ onMounted(async () => {
 
 
             <ul class="mt-5 flex gap-2 flex-wrap lg:justify-around">
-                <shoeSize>33</shoeSize>
-                <shoeSize>34</shoeSize>
-                <shoeSize>35</shoeSize>
-                <shoeSize>36</shoeSize>
-                <shoeSize>37</shoeSize>
-                <shoeSize>38</shoeSize>
-                <shoeSize>39</shoeSize>
-                <shoeSize>40</shoeSize>
-                <shoeSize>41</shoeSize>
-                <shoeSize>42</shoeSize>
-                <shoeSize>43</shoeSize>
-                <shoeSize>44</shoeSize>
+                <shoeSize class="border border-shadeblack ">33</shoeSize>
+                <shoeSize class="border border-shadeblack ">34</shoeSize>
+                <shoeSize class="border border-shadeblack ">35</shoeSize>
+                <shoeSize class="border border-shadeblack ">36</shoeSize>
+                <shoeSize class="border border-shadeblack ">37</shoeSize>
+                <shoeSize class="border border-shadeblack ">38</shoeSize>
+                <shoeSize class="border border-shadeblack ">39</shoeSize>
+                <shoeSize class="border border-shadeblack ">40</shoeSize>
+                <shoeSize class="border border-shadeblack ">41</shoeSize>
+                <shoeSize class="border border-shadeblack ">42</shoeSize>
+                <shoeSize class="border border-shadeblack ">43</shoeSize>
+                <shoeSize class="border border-shadeblack ">44</shoeSize>
             </ul>
         </div>
 

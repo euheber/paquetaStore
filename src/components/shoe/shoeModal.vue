@@ -52,7 +52,7 @@ defineExpose({
             </div>
 
             <div class="p-2">
-                <i class="fa-solid fa-xmark ml-64 text-lg" @click="activeModal"></i>
+                <i class="fa-solid fa-xmark ml-64 text-lg cursor-pointer" @click="activeModal"></i>
                 <table>
                     <tr>
                         <th class="text-sm font-montserrat text-shadeblack">Número do calçado</th>

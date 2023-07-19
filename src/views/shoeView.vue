@@ -2,7 +2,7 @@
 import shoeSize from "@/components/shoe/shoeSize.vue"
 import slotBtn from "@/components/slots/button.vue"
 import card from "@/components/shoe/card.vue"
-import { onMounted, ref, type Ref } from "vue";
+import {ref, onBeforeMount} from "vue";
 import { useRoute } from "vue-router";
 import { register } from "swiper/element";
 import type { Mask } from "@/types/shoe"
@@ -16,15 +16,20 @@ const child = ref<typeof shoeModal | null>(null);
 
 const route = useRoute()
 const { pushShoe } = wishlist()
-register()
+const { checkIfShoeExists } = wishlist()
+
 
 let shoe = ref<Mask>();
 let shoeList = ref<Mask[]>()
 let shoeExists = ref()
 
-onMounted(async () => {
+register()
+
+
+onBeforeMount(async () => {
   window.scrollTo(0, 0);
-  const id = route.params.id
+  const id:string | string[] = route.params.id
+
   const data = await fetch(`https://api.brchallenges.com/api/paqueta/shoe/${id}`)
   const response = await data.json()
 
@@ -33,23 +38,21 @@ onMounted(async () => {
   const api = await fetch("https://api.brchallenges.com/api/paqueta/shoes")
   const shoes = await api.json()
 
-  shoeList.value = shoes.slice(20)
+  shoeList.value = shoes.slice(22)
 
+  shoeExists.value = checkIfShoeExists(id.toString()).value
 })
 
 
-const wishlistShoe = (shoe: Mask) => {
-  shoeExists.value = pushShoe(shoe).value
-}
-
+const wishlistShoe = (shoe: Mask) => shoeExists.value = pushShoe(shoe).value
 
 const updateRoute = async () => {
   const id = route.params.id
   const data = await fetch(`https://api.brchallenges.com/api/paqueta/shoe/${id}`)
   const response = await data.json()
-
+  shoeExists.value = checkIfShoeExists(id.toString()).value
   shoe.value = response[0]
-  window.scrollTo(0, 0);
+
 }
 
 const activeModal = () => {
@@ -58,6 +61,12 @@ const activeModal = () => {
   } else {
     return
   }
+}
+
+
+let shoeSizes = ref<Number>(0)
+const selectShoeSize = (size:number) => { 
+  shoeSizes.value = size
 }
 
 const timesX = Math.floor(Math.random() * 15) + 3
@@ -133,32 +142,24 @@ const timesX = Math.floor(Math.random() * 15) + 3
             <p class="font-montserrat text-sm text-shadeblack font-normal">Escolha a numeração:</p>
 
             <ul class="flex gap-2 mt-2">
-              <li>
-                <shoeSize>34</shoeSize>
-              </li>
-              <li>
-                <shoeSize>35</shoeSize>
-              </li>
-              <li>
-                <shoeSize>36</shoeSize>
-              </li>
-              <li>
-                <shoeSize>37</shoeSize>
-              </li>
-              <li>
-                <shoeSize>38</shoeSize>
-              </li>
-              <li>
-                <shoeSize>39</shoeSize>
-              </li>
-              <li>
-                <shoeSize>40</shoeSize>
-              </li>
+                <shoeSize class="box border cursor-pointer hover:border-orange transition duration-200" @click="selectShoeSize(34)"  :class="[shoeSizes == 34 ? 'border border-orange' : 'border']">34</shoeSize>
+
+                <shoeSize class="box border cursor-pointer hover:border-orange transition duration-200" @click="selectShoeSize(35)" :class="[shoeSizes == 35 ? 'border border-orange' : 'border']">35</shoeSize>
+
+                <shoeSize class="box border cursor-pointer hover:border-orange transition duration-200" @click="selectShoeSize(36)" :class="[shoeSizes == 36 ? 'border border-orange' : 'border']">36</shoeSize>
+          
+                <shoeSize class="box border cursor-pointer hover:border-orange transition duration-200" @click="selectShoeSize(37)" :class="[shoeSizes == 37 ? 'border border-orange' : 'border']">37</shoeSize>
+            
+                <shoeSize class="box border cursor-pointer hover:border-orange transition duration-200" @click="selectShoeSize(38)" :class="[shoeSizes == 38 ? 'border border-orange' : 'border']">38</shoeSize>
+          
+                <shoeSize class="box border cursor-pointer hover:border-orange transition duration-200" @click="selectShoeSize(39)" :class="[shoeSizes == 39 ? 'border border-orange' : 'border']">39</shoeSize>
+          
+                <shoeSize class="box border cursor-pointer hover:border-orange transition duration-200" @click="selectShoeSize(40)" :class="[shoeSizes == 40 ? 'border border-orange' : 'border']">40</shoeSize>
             </ul>
 
             <button class="mt-5 hidden lg:block" @click="activeModal">Guia de tamanho</button>
 
-            <slotBtn class="mt-5" v-if="!shoe.soldout" @click="insertShoe({...shoe, quantity: 1})">Comprar</slotBtn>
+            <slotBtn class="mt-5" v-if="!shoe.soldout" @click="insertShoe({...shoe, quantity: 1})">Adicionar ao carrinho</slotBtn>
             <slotBtn class="mt-5" v-else>Me avise quando chegar</slotBtn>
           </div>
         </div>
@@ -187,9 +188,10 @@ const timesX = Math.floor(Math.random() * 15) + 3
       },
     }" :centeredSlides="false" :pagination="{ clickable: true, }" class="mySwiper pb-12">
       <swiper-slide v-for="shoe in shoeList" :key="shoe.id">
-        <card :shoe=shoe class="m-auto" @click="updateRoute" />
+        <card :shoe=shoe class="m-auto" @click="updateRoute"/>
       </swiper-slide>
     </swiper-container>
+
   </section>
 
   <shoeModal ref="child" />
