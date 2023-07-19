@@ -37,7 +37,7 @@ onMounted(async () => {
                         R$ 79,99
                     </p>
 
-                    <buttonSlot class="w-40">
+                    <buttonSlot class="w-40 hover:text-white transition duration-500">
                         Aproveite
                     </buttonSlot>
                 </div>
