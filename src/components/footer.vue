@@ -36,49 +36,49 @@ import buttonSlot from "@/components/slots/button.vue"
                         <input type="checkbox" class="ml-3"> <span class="text-white text-sm">Mulheres</span>
                     </div>
 
-                    <buttonSlot class="text-white font-poppins mt-5 font-normal">Quero receber</buttonSlot>
+                    <buttonSlot class="text-white font-poppins mt-5 font-normal hover:text-shadeblack transition duration-500">Quero receber</buttonSlot>
                 </form>
             </div>
         </section>
 
         <section class="max-w-5xl m-auto md:flex">
-
+       
             <div class="bg-white p-5 max-w-xs">
                 <h1 class="font-bold text-lg font-montserrat">Institucional</h1>
                 <ul class="mt-5 space-y-2">
-                    <li class="text-shadeblack text-sm">Quem somos</li>
-                    <li class="text-shadeblack text-sm">Nossas lojas</li>
-                    <li class="text-shadeblack text-sm">Soluções corporativas</li>
-                    <li class="text-shadeblack text-sm">Politica de privacidade</li>
-                    <li class="text-shadeblack text-sm">Contrato de compra e venda</li>
-                    <li class="text-shadeblack text-sm">Crédito Pessoal</li>
+                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Quem somos</li>
+                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Nossas lojas</li>
+                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Soluções corporativas</li>
+                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Politica de privacidade</li>
+                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Contrato de compra e venda</li>
+                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Crédito Pessoal</li>
                 </ul>
             </div>
 
             <div class="bg-white p-5 max-w-xs">
                 <h1 class="font-bold text-lg font-montserrat">Ajuda e suporte</h1>
                 <ul class="mt-5 space-y-2">
-                    <li class="text-shadeblack text-sm">Troca e devolução</li>
-                    <li class="text-shadeblack text-sm">2ª Via do Boleto</li>
-                    <li class="text-shadeblack text-sm">Detalhamento de Fatura</li>
-                    <li class="text-shadeblack text-sm">Entregas</li>
-                    <li class="text-shadeblack text-sm">Meus Pedidos</li>
-                    <li class="text-shadeblack text-sm">Dúvidas Frequentes</li>
-                    <li class="text-shadeblack text-sm">Status do Pedido</li>
+                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Troca e devolução</li>
+                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">2ª Via do Boleto</li>
+                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Detalhamento de Fatura</li>
+                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Entregas</li>
+                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Meus Pedidos</li>
+                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Dúvidas Frequentes</li>
+                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Status do Pedido</li>
                 </ul>
             </div>
 
             <div class="bg-white p-5 max-w-xs">
                 <div class="contact">
                     <h1 class="font-bold text-lg font-montserrat">Atendimento</h1>
-                    <a href="/" class="text-xs text-shadeblack">Façe conosco</a>
+                    <a href="/" class="text-xs text-shadeblack hover:text-orange transition duration-500 cursor-pointer">Fale conosco</a>
 
                     <h1 class="font-bold mt-5 text-lg font-montserrat">Endereço</h1>
-                    <a href="/" class="text-xs text-shadeblack">Rua Antonio Frederico Ozanan, 2601 Canoas - RS | CNPJ:
-                        01.098.983/0175-02</a>
+                    <p  class="text-xs text-shadeblack ">Rua Antonio Frederico Ozanan, 2601 Canoas - RS | CNPJ:
+                        01.098.983/0175-02</p>
 
                     <h1 class="font-bold mt-5 text-lg font-montserrat">Trabalhe conosco</h1>
-                    <a href="/" class="text-xs text-shadeblack">Venha crescer com a Paquetá!</a>
+                    <a href="/" class="text-xs text-shadeblack hover:text-orange transition duration-500 cursor-pointer">Venha crescer com a Paquetá!</a>
                 </div>
             </div>
 

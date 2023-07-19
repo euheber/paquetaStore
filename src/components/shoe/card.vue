@@ -77,12 +77,12 @@ const timesX = Math.floor(Math.random() * 15) + 3
       <span class="text-xs mr-auto mb-3 font-montserrat">
         OU {{ timesX }}X de R$ {{ (props.shoe.price.value / timesX).toFixed(2) }}
       </span>
-      <buttonVue v-if="!props.shoe.soldout" class=" text-xs font-bold w-full mt-auto"
+      <buttonVue v-if="!props.shoe.soldout" class=" text-xs font-bold w-full mt-auto hover:text-shadeblack transition duration-500"
         @click="addToCart">
         Adicionar ao carrinho
       </buttonVue>
-      <buttonVue v-else class=" text-xs font-bold mt-auto
-       w-full bg-orange ">
+      <buttonVue v-else class="text-xs font-bold mt-auto
+       w-full bg-orange hover:text-shadeblack transition duration-500">
         Me avise quando chegar
       </buttonVue>
     </div>
@@ -90,11 +90,11 @@ const timesX = Math.floor(Math.random() * 15) + 3
 
     <TransitionGroup  enter-active-class="animate__animated animate__fadeIn"  leave-active-class="animate__animated animate__fadeOut">
       <div class="absolute top-0 bg-orange py-4 text-center font-montserrat text-xs font-bold w-full"  v-if="wishlisted">
-        Adicionado a lista de desejos
+        <p class="text-white font-montserrat">Adicionado a lista de desejos</p>
       </div>
 
       <div class="absolute top-0 bg-orange py-4 text-center font-montserrat text-xs font-bold w-full"  v-if="shoped">
-        Adicionado ao carrinho
+        <p class="text-white font-montserrat">Adicionado ao carrinho</p>
       </div>
     </TransitionGroup >
   </div>

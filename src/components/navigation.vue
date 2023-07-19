@@ -63,11 +63,11 @@ const wishlist = UserWishlist()
 
       <div class="sections mt-3" v-if="route.name == 'home'">
         <ul class="flex justify-center flex-wrap gap-6">
-          <li><a href="/" class="text-sm">Novidades</a></li>
-          <li><a href="/" class="text-sm">Feminino</a></li>
-          <li><a href="/" class="text-sm">Masculino</a></li>
-          <li><a href="/" class="text-sm">Paquetá-esportes</a></li>
-          <li><a href="/" class="text-sm">Outlet</a></li>
+          <li class="hover:text-orange transition duration-500"><a href="/" class="text-sm">Novidades</a></li>
+          <li class="hover:text-orange transition duration-500"><a href="/" class="text-sm">Feminino</a></li>
+          <li class="hover:text-orange transition duration-500"><a href="/" class="text-sm">Masculino</a></li>
+          <li class="hover:text-orange transition duration-500"><a href="/" class="text-sm">Paquetá-esportes</a></li>
+          <li class="hover:text-orange transition duration-500"><a href="/" class="text-sm">Outlet</a></li>
         </ul>
       </div>
     </nav>

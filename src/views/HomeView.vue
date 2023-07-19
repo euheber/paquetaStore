@@ -100,7 +100,7 @@ onMounted(async () => {
                         fácil, mas o que uma mulher não consegue fazer?
                     </p>
 
-                    <buttonSlot class="px-24 mt-5 mb-5">
+                    <buttonSlot class="px-24 mt-5 mb-5 hover:text-white transition duration-500">
                         Conferir
                     </buttonSlot>
                 </div>
@@ -117,7 +117,7 @@ onMounted(async () => {
                         mesmo para praticar esportes!
                     </p>
 
-                    <buttonSlot class="px-24 mt-5">
+                    <buttonSlot class="px-24 mt-5 hover:text-white transition duration-500">
                         Conferir
                     </buttonSlot>
                 </div>
@@ -158,8 +158,8 @@ onMounted(async () => {
         <section class="mt-10">
             <div class="header flex justify-between items-center">
                 <h1 class="font-bold text-lg uppercase">Destaques</h1>
-                <router-link to="/todosmodelos" class="text-sm border-b-orange border-b">
-                    Conferir tudo
+                <router-link to="/todosmodelos" class="text-md border-b-orange border-b ">
+                    <span class="hover:scale-95 block transition-all duration-100">Conferir tudo</span>
                 </router-link>
 
             </div>
