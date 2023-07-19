@@ -80,7 +80,7 @@ const timesX = Math.floor(Math.random() * 15) + 3
       <div class="img max-w-5xl m-auto flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-center">
         <div class="">
 
-          <img :src="shoe.image" alt="" class="h-96">
+          <img :src="shoe.image" alt="" class="h-96 mx-auto ">
 
           <div class="">
             <span class="text-sm">Compartilhe</span>
