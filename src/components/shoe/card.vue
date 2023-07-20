@@ -34,7 +34,6 @@ const wishlistShoe = () => {
   }
 }
 
-
 const addToCart = () => { 
   insertShoe({ ...props.shoe, quantity: 1 })
 

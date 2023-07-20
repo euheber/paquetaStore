@@ -46,44 +46,44 @@ import buttonSlot from "@/components/slots/button.vue"
             <div class="bg-white p-5 max-w-xs">
                 <h1 class="font-bold text-lg font-montserrat">Institucional</h1>
                 <ul class="mt-5 space-y-2">
-                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Quem somos</li>
-                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Nossas lojas</li>
-                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Soluções corporativas</li>
-                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Politica de privacidade</li>
-                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Contrato de compra e venda</li>
-                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Crédito Pessoal</li>
+                    <li class="text-shadeblack font-montserrat text-sm hover:text-orange transition duration-500 cursor-pointer">Quem somos</li>
+                    <li class="text-shadeblack text-sm font-montserrat hover:text-orange transition duration-500 cursor-pointer">Nossas lojas</li>
+                    <li class="text-shadeblack text-sm font-montserrat hover:text-orange transition duration-500 cursor-pointer">Soluções corporativas</li>
+                    <li class="text-shadeblack text-sm font-montserrat hover:text-orange transition duration-500 cursor-pointer">Politica de privacidade</li>
+                    <li class="text-shadeblack text-sm font-montserrat hover:text-orange transition duration-500 cursor-pointer">Contrato de compra e venda</li>
+                    <li class="text-shadeblack text-sm font-montserrat hover:text-orange transition duration-500 cursor-pointer">Crédito Pessoal</li>
                 </ul>
             </div>
 
             <div class="bg-white p-5 max-w-xs">
                 <h1 class="font-bold text-lg font-montserrat">Ajuda e suporte</h1>
                 <ul class="mt-5 space-y-2">
-                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Troca e devolução</li>
-                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">2ª Via do Boleto</li>
-                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Detalhamento de Fatura</li>
-                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Entregas</li>
-                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Meus Pedidos</li>
-                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Dúvidas Frequentes</li>
-                    <li class="text-shadeblack text-sm hover:text-orange transition duration-500 cursor-pointer">Status do Pedido</li>
+                    <li class="text-shadeblack text-sm font-montserrat hover:text-orange transition duration-500 cursor-pointer">Troca e devolução</li>
+                    <li class="text-shadeblack text-sm font-montserrat hover:text-orange transition duration-500 cursor-pointer">2ª Via do Boleto</li>
+                    <li class="text-shadeblack text-sm font-montserrat hover:text-orange transition duration-500 cursor-pointer">Detalhamento de Fatura</li>
+                    <li class="text-shadeblack text-sm font-montserrat hover:text-orange transition duration-500 cursor-pointer">Entregas</li>
+                    <li class="text-shadeblack text-sm font-montserrat hover:text-orange transition duration-500 cursor-pointer">Meus Pedidos</li>
+                    <li class="text-shadeblack text-sm font-montserrat hover:text-orange transition duration-500 cursor-pointer">Dúvidas Frequentes</li>
+                    <li class="text-shadeblack text-sm font-montserrat hover:text-orange transition duration-500 cursor-pointer">Status do Pedido</li>
                 </ul>
             </div>
 
             <div class="bg-white p-5 max-w-xs">
                 <div class="contact">
                     <h1 class="font-bold text-lg font-montserrat">Atendimento</h1>
-                    <a href="/" class="text-xs text-shadeblack hover:text-orange transition duration-500 cursor-pointer">Fale conosco</a>
+                    <a href="/" class="text-xs text-shadeblack font-montserrat hover:text-orange transition duration-500 cursor-pointer">Fale conosco</a>
 
                     <h1 class="font-bold mt-5 text-lg font-montserrat">Endereço</h1>
-                    <p  class="text-xs text-shadeblack ">Rua Antonio Frederico Ozanan, 2601 Canoas - RS | CNPJ:
+                    <p  class="text-xs text-shadeblack font-montserrat">Rua Antonio Frederico Ozanan, 2601 Canoas - RS | CNPJ:
                         01.098.983/0175-02</p>
 
                     <h1 class="font-bold mt-5 text-lg font-montserrat">Trabalhe conosco</h1>
-                    <a href="/" class="text-xs text-shadeblack hover:text-orange transition duration-500 cursor-pointer">Venha crescer com a Paquetá!</a>
+                    <a href="/" class="text-xs text-shadeblack font-montserrat hover:text-orange transition duration-500 cursor-pointer">Venha crescer com a Paquetá!</a>
                 </div>
             </div>
 
             <div class="bg-white p-5 max-w-xs">
-                <h1 class="text-lg font-bold">Formas de pagamento</h1>
+                <h1 class="text-lg font-bold font-montserrat">Formas de pagamento</h1>
 
                 <div class="grid grid-cols-3 gap-5 mt-5 justify-center items-center">
                     <img src="/icons/mastercard.svg" alt="Bandeira Mastercard">
@@ -97,7 +97,7 @@ import buttonSlot from "@/components/slots/button.vue"
                     <img src="/icons/boleto.svg" alt="Bandeira boleto bancário">
                 </div>
 
-                <h1 class="text-lg font-bold mt-4">Redes sociais</h1>
+                <h1 class="text-lg font-bold mt-4 font-montserrat">Redes sociais</h1>
 
                 <div class="flex gap-2 mt-2">
                     <img src="/icons/instagram.svg" alt="Bandeira">
@@ -109,7 +109,7 @@ import buttonSlot from "@/components/slots/button.vue"
             </div>
 
             <div class="p-5 max-w-xs">
-                <h1 class="font-bold text-lg">Premios e certificações</h1>
+                <h1 class="font-bold text-lg font-montserrat">Premios e certificações</h1>
 
                 <img src="/icons/certificate.png" alt="Certificado de segurança" class="mt-5">
                 <img src="/icons/blindado.svg" alt="Bandeira" class="mt-5">
@@ -119,7 +119,7 @@ import buttonSlot from "@/components/slots/button.vue"
         </section>
         <div class="bg-shadeblack p-3">
             <div class="flex items-center justify-center gap-3 max-w-3xl m-auto">
-                <h1 class="uppercase text-white font-bold text-sm">uma empresa do grupo</h1>
+                <h1 class="uppercase text-white font-bold text-sm font-montserrat">uma empresa do grupo</h1>
                 <img src="/icons/company.png" alt="Bandeira" class="w-40">
             </div>
         </div>

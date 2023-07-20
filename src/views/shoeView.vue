@@ -159,8 +159,8 @@ const timesX = Math.floor(Math.random() * 15) + 3
 
             <button class="mt-5 hidden lg:block" @click="activeModal">Guia de tamanho</button>
 
-            <slotBtn class="mt-5" v-if="!shoe.soldout" @click="insertShoe({...shoe, quantity: 1})">Adicionar ao carrinho</slotBtn>
-            <slotBtn class="mt-5" v-else>Me avise quando chegar</slotBtn>
+            <slotBtn class="mt-5 hover:text-shadeblack transition duration-500" v-if="!shoe.soldout" @click="insertShoe({...shoe, quantity: 1})">Adicionar ao carrinho</slotBtn>
+            <slotBtn class="mt-5 hover:text-shadeblack transition duration-500" v-else>Me avise quando chegar</slotBtn>
           </div>
         </div>
       </div>
